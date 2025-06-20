@@ -351,4 +351,19 @@ h2 {
   .navbar .logo { 
     font-size: 1.2rem; /* Justerer størrelsen på h1 logo for mobil */
   }
+
+  /* Hindrer at Hero h2 bryter linje på mobil */
+  .hero-content h2 {
+    font-size:1.6rem;
+    line-height:1.3;
+    word-break: break-word; 
+    text-wrap: balance;
+  }
+
+  .container h2 {
+      font-size:1.6rem;
+      line-height:1.3;
+      word-break: break-word; /* Hindrer at melkeveien h2 bryter linje på mobil */
+      text-wrap: balance;
+  }
 }
