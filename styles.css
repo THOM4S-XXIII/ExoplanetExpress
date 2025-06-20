@@ -30,7 +30,7 @@ body {
 
 /* Global oppførsel */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior:smooth
 }
 
 .container {
@@ -59,6 +59,7 @@ header.hero {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   color: var(--accent-color);
+  white-space: nowrap; /* Hindrer linjebryting for små skjermer */
 }
 
 .nav-links {
@@ -71,6 +72,7 @@ header.hero {
   color: var(--accent-color);
   text-decoration: none;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .nav-links a:hover {
@@ -89,6 +91,9 @@ header.hero {
   border: none;
   font-size: 1.5rem;
   color: var(--accent-color);
+  z-index: 1100; /* Sørger for at meny knappen er tilgjengelig når den er åpen */
+  position: relative;
+  cursor:pointer;
 }
 
 /* Hero seksjon */
@@ -215,7 +220,7 @@ h2 {
 
 /* FAQ Seksjon */
 
-.faq-p {
+.faq-p { 
   font-size: 1.1rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
@@ -296,9 +301,9 @@ h2 {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
-.glightbox-clean .gdesc-inner,
+.glightbox-clean .gdesc-inner, 
 .glightbox-clean .gslide-title {
-  background-color: #000000; /* Helt svart bakgrunn */
+  background-color: #000000;
   color: var(--primary-color);
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -337,5 +342,13 @@ h2 {
 
   .hamburger {
     display: block;
+  }
+
+  .navbar { 
+    flex-wrap: wrap; /* Hindrer at logo og hamburger kolliderer for mobil */
+  }
+
+  .navbar .logo { 
+    font-size: 1.2rem; /* Justerer størrelsen på h1 logo for mobil */
   }
 }
